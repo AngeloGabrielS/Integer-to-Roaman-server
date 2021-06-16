@@ -1,13 +1,8 @@
 import { Router } from "express";
-import ExampleController from "./app/controllers/ExampleController";
+import RomanController from "./app/controllers/RomanController";
 
 const routes: Router = Router();
 
-// Rotas exemplo
-routes.post('/products', ExampleController.create);
-routes.get('/products', ExampleController.find);
-routes.get('/products/:id', ExampleController.findOne);
-routes.put('/products/:id', ExampleController.updateOne);
-routes.delete('/products/:id', ExampleController.deleteOne);
+routes.get('/int2rom', RomanController.int2ROM);
 
 export default routes;
